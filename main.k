@@ -25,7 +25,7 @@ $#   lsmtd     lsdir      irad      srad      awgt      sred
          4         2       0.0       0.0       0.0       0.0
 *CONTROL_TERMINATION
 $#  endtim    endcyc     dtmin    endeng    endmas     nosol
-       2.0         0       0.0       0.01.000000E8         0
+       1.0         0       0.0       0.01.000000E8         0
 *DATABASE_ELOUT
 $#      dt    binary      lcur     ioopt   option1   option2   option3   option4
       0.01         0         0         1         0         0         0         0

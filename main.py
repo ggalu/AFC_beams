@@ -62,12 +62,12 @@ if __name__ == "__main__":
     print(res.x) 
 
   elif case =="scan":
-     R0 = 1.5
+     R0 = 1.0
      r0 = 1.5
      #r_range = r0 + np.linspace(-0.5, 0.5, 10)
-     R_range = R0 + np.linspace(-0.5, 0.5, 10)
+     R_range = R0 + np.linspace(-0.5, 0.0, 10)
      for R in R_range:
-        p = [R0, R]
+        p = [r0, R]
         cost_function(p)
 
 

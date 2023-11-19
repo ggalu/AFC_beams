@@ -20,12 +20,14 @@ def run_ls_prepost(folder_name):
     status = subprocess.run(comm, cwd=target_path, stdout=outfile)
     outfile.close()
 
-    filename = os.path.join(target_path, "force.csv")
+    filename = os.path.join(target_path, "force_energy.csv")
     data = np.genfromtxt(filename, delimiter=",", skip_header=2)
-    x, y = data[:,0], data[:,1]
-    integral = np.trapz(y, x=x)
-    print("value of integral: ", integral)
-    return integral
+    time, force, friction_energy = data[:,0], data[:,1], data[:,2]
+    emax = friction_energy[-1]
+    #integral = np.trapz(y, x=x)
+    #print("value of integral: ", integral)
+    print("last value of friction energy: ", emax)
+    return emax
     
 if __name__ == "__main__":
   run_ls_prepost("test")
